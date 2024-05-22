@@ -1,4 +1,3 @@
-import time
 MENU = {
     "espresso": {
         "ingredients": {
@@ -85,13 +84,10 @@ def is_transaction_successful(money_received, drink_cost):
 
 def make_coffee(drink_name, order_ingredients):
     """Deduct the required ingredients from the resources and inform the user about the preparation."""
-   # preparation_time = 0
     print("Order accepted...")
     for item in order_ingredients:
         resources[item] -= order_ingredients[item]
-       # preparation_time += order_ingredients[item]
     print(f"Making your {drink_name}...")
-   # time.sleep()
     print(f"Here is your {drink_name} ☕️. Enjoy!")
 
 
